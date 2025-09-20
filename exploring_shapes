@@ -1,0 +1,21 @@
+let nb = 30;
+let rot = 5;
+let dim = 350;
+
+
+function setup() {
+  createCanvas(500, 500);
+  rectMode(CENTER);
+  angleMode(DEGREES);
+}
+
+function draw() {
+  background(0);
+  translate (width/2, height/2); //places x,y on the center of the cancas instead of top left
+  noFill();
+  stroke(255);
+  for (let i= 0; i<nb; i=i+1){
+    square(0,0,dim);
+    rotate(rot);
+  }
+}
